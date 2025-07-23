@@ -2,7 +2,6 @@ import rosbag
 import sensor_msgs.point_cloud2 as pc2
 import open3d as o3d
 import numpy as np
-from tqdm import tqdm
 import os
 
 bag_path = "/home/myungw00/ROS/rosbag/kcity/2024-10-13-10-45-20.bag"
