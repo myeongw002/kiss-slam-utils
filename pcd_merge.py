@@ -14,8 +14,6 @@ def merge_pcds(pcd_paths, output_path, voxel_downsample=None):
     """
     merged = o3d.geometry.PointCloud()
     for idx, path in enumerate(pcd_paths):
-        if idx > 4 :
-            break
         if not os.path.exists(path):
             print(f"경고: 파일이 없습니다: {path}")
             continue
@@ -37,8 +35,8 @@ def merge_pcds(pcd_paths, output_path, voxel_downsample=None):
 
 if __name__ == "__main__":
     # 경로 설정 (코드 내에서 직접 수정)
-    INPUT_DIR = "/home/myungw00/kiss_slam/slam_output/2024-03-19/2025-07-28_14-21-55/local_maps/plys"
-    OUTPUT_PCD = "/home/myungw00/kiss_slam/slam_output/2024-03-19/2025-07-28_14-21-55/local_maps/merged.pcd"
+    INPUT_DIR = "/home/myungw00/kiss_slam/slam_output/2024-06-15/2025-07-23_15-35-25/local_maps/plys"
+    OUTPUT_PCD = "/home/myungw00/kiss_slam/slam_output/2024-06-15/2025-07-23_15-35-25/local_maps/merged.pcd"
     VOXEL_SIZE = None  # 예: 0.02
 
     # 디렉터리 내 모든 PCD 파일 검색
