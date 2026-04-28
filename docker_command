@@ -1,0 +1,15 @@
+docker run -it --rm \
+    --name kissslam_con \
+    --gpus all \
+    -e DISPLAY=$DISPLAY \
+	-e QT_X11_NO_MITSHM=1 \
+	-e XDG_RUNTIME_DIR=/tmp/runtime-docker \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v /home/myungw00/ROS2/kissslam_ws:/workspace \
+    -v /media/myungw00/256GB_SSD:/data \
+    kissslam bash
+    
+    
+    
+    
+docker commit sam_calib sam_calib_img
