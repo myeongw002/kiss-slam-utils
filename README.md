@@ -142,9 +142,9 @@ Build the Docker image:
 
 ```bash
 docker build \
-  --build-arg USER_UID=$(id -u) \
-  --build-arg USER_GID=$(id -g) \
-  -t kissslam .
+    --build-arg USER_UID=$(id -u) \
+    --build-arg USER_GID=$(id -g) \
+    -t kissslam .
 ```
 
 The `docker_command` file contains an example command that connects GPU, X11 GUI, workspace, and dataset volumes. Update the `-v` mount paths for your machine before running it.

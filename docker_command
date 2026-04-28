@@ -10,6 +10,9 @@ docker run -it --rm \
     kissslam bash
     
     
-    
+docker build \
+    --build-arg USER_UID=$(id -u) \
+    --build-arg USER_GID=$(id -g) \
+    -t kissslam .    
     
 docker commit sam_calib sam_calib_img
