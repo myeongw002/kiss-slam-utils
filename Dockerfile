@@ -4,9 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV QT_X11_NO_MITSHM=1
 ENV XDG_RUNTIME_DIR=/tmp/runtime-docker
 
-RUN apt update &&
-    apt upgrade && 
-    apt install -y \
+RUN apt update && apt upgrade -y && apt install -y \
     sudo \
     locales \
     vim \
@@ -17,7 +15,7 @@ RUN apt update &&
     python3 \
     python3-pip \
     python3-venv \
-    libgl1 \ 
+    libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
